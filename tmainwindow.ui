@@ -23,6 +23,11 @@
       <height>451</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Courier New</family>
+     </font>
+    </property>
    </widget>
    <widget class="QLabel" name="lblLog">
     <property name="geometry">
@@ -68,7 +73,7 @@
       <height>171</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="layoutHeuristics">
      <item>
       <widget class="QLabel" name="lblHeuristics">
        <property name="font">
@@ -100,7 +105,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="btnEvklidHeuristic">
+      <widget class="QRadioButton" name="rbEvklidHeuristic">
        <property name="text">
         <string>Эвклида</string>
        </property>
@@ -137,7 +142,7 @@
       <height>81</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
+    <layout class="QVBoxLayout" name="layoutOptions">
      <item>
       <widget class="QCheckBox" name="cbUseTimer">
        <property name="text">
@@ -196,7 +201,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinboxEndX">
+   <widget class="QSpinBox" name="spboxEndX">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -216,7 +221,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinboxEndY">
+   <widget class="QSpinBox" name="spboxEndY">
     <property name="geometry">
      <rect>
       <x>510</x>

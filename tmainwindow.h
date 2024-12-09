@@ -17,5 +17,17 @@ public:
 
 private:
     Ui::TMainWindow *ui;
+
+    // variables
+    std::string separator;
+    bool matrixIsLoaded;
+
+    // functions and procedures
+    void logMessage(std::string message);
+    void logSeparator();
+
+    void initUI();
+    void initLog();
+    void initPathfindElems();
 };
 #endif // TMAINWINDOW_H
