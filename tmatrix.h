@@ -18,6 +18,8 @@ public:
     void visit();
     void unvisit();
     bool isVisited();
+
+    friend class TMatrixReader;
 };
 
 class TMatrix
@@ -37,6 +39,10 @@ public:
     void unvisit();
     type getValue(TPoint point);
 
+    int getSizeX(){return data[0].size();};
+    int getSizeY(){return data.size();};
+
+    friend class TMatrixReader;
 };
 
 #endif // TMATRIX_H
