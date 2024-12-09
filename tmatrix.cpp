@@ -73,6 +73,18 @@ void TMatrix::unvisit()
         }
 }
 
+void TMatrix::setPrevPoint(TPoint point, TPoint prevPoint)
+{
+    checkIfPointIsInMatrix(point);
+    getPoint(point).setPrevPoint(prevPoint);
+}
+
+TPoint TMatrix::getPrevPoint(TPoint point)
+{
+    checkIfPointIsInMatrix(point);
+    return getPoint(point).getPrevPoint();
+}
+
 type TMatrix::getValue(TPoint point)
 {
     checkIfPointIsInMatrix(point);
@@ -104,4 +116,14 @@ void TMatrixPoint::unvisit()
 bool TMatrixPoint::isVisited()
 {
     return visited;
+}
+
+TPoint TMatrixPoint::getPrevPoint()
+{
+    return prevPoint;
+}
+
+void TMatrixPoint::setPrevPoint(TPoint prevPoint)
+{
+    this->prevPoint=prevPoint;
 }

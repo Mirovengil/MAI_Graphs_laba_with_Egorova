@@ -12,12 +12,15 @@ class TMatrixPoint
 private:
     type value;
     bool visited;
+    TPoint prevPoint;
 public:
     void setValue(type value);
     type getValue();
     void visit();
     void unvisit();
     bool isVisited();
+    TPoint getPrevPoint();
+    void setPrevPoint(TPoint prevPoint);
 
     friend class TMatrixReader;
 };
@@ -37,6 +40,8 @@ public:
     void setValue(TPoint point, type value);
     void resize(int N, int M);
     void unvisit();
+    void setPrevPoint(TPoint point, TPoint prevPoint);
+    TPoint getPrevPoint(TPoint point);
     type getValue(TPoint point);
 
     int getSizeX(){return data[0].size();};
