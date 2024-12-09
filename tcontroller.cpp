@@ -4,7 +4,26 @@
 TController::TController(TMatrix *matrix)
 {
     this->matrix = matrix;
+
+    pathFinder.setMatrix(matrix);
+    pathFinder.setHeuristic(new TNoHeuristicStrategy);
+
     matrixIsInitialized = false;
+}
+
+void TController::setStartPoint(TPoint point)
+{
+    pathFinder.setStartPoint(point);
+}
+
+void TController::setEndPoint(TPoint point)
+{
+    pathFinder.setEndPoint(point);
+}
+
+void TController::setHeuristic(IHeuristicStrategy *heuristic)
+{
+    pathFinder.setHeuristic(heuristic);
 }
 
 void TController::fillMatrixFromFile(std::string filename)

@@ -6,6 +6,11 @@ TPoint::TPoint(int x, int y)
     this->y = y;
 }
 
+TPoint::TPoint() : TPoint(0, 0)
+{
+
+}
+
 int TPoint::getX()
 {
     return x;

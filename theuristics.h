@@ -5,14 +5,6 @@
 #include <string>
 #include <math.h>
 
-int abs(int a)
-{
-    if (a > 0)
-        return a;
-    else
-        return -a;
-}
-
 class IHeuristicStrategy
 {
 public:
@@ -20,7 +12,7 @@ public:
     virtual int getDistance(TPoint from, TPoint to) = 0;
 };
 
-class TEvclideHeuristicStrategy : IHeuristicStrategy
+class TEvclideHeuristicStrategy : public IHeuristicStrategy
 {
 public:
     virtual std::string getSignature()
@@ -36,7 +28,7 @@ public:
     }
 };
 
-class TManhattenHeuristicStrategy : IHeuristicStrategy
+class TManhattenHeuristicStrategy : public IHeuristicStrategy
 {
 public:
     virtual std::string getSignature()
@@ -50,7 +42,7 @@ public:
     }
 };
 
-class TChebyshevHeuristicStrategy: IHeuristicStrategy
+class TChebyshevHeuristicStrategy: public IHeuristicStrategy
 {
 public:
     virtual std::string getSignature()
@@ -64,7 +56,7 @@ public:
     }
 };
 
-class TNoHeuristicStrategy: IHeuristicStrategy
+class TNoHeuristicStrategy: public IHeuristicStrategy
 {
 public:
     virtual std::string getSignature()

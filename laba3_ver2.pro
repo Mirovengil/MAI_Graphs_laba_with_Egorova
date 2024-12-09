@@ -14,6 +14,8 @@ SOURCES += \
     tmainwindow.cpp \
     tmatrix.cpp \
     tmatrixreader.cpp \
+    tpath.cpp \
+    tpathfinder.cpp \
     tpoint.cpp
 
 HEADERS += \
@@ -22,6 +24,8 @@ HEADERS += \
     tmainwindow.h \
     tmatrix.h \
     tmatrixreader.h \
+    tpath.h \
+    tpathfinder.h \
     tpoint.h
 
 FORMS += \
