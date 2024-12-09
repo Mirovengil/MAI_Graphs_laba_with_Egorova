@@ -2,6 +2,7 @@
 #define TMAINWINDOW_H
 
 #include <QMainWindow>
+#include "tcontroller.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class TMainWindow; }
@@ -12,7 +13,7 @@ class TMainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    TMainWindow(QWidget *parent = nullptr);
+    TMainWindow(TController *controller, QWidget *parent = nullptr);
     ~TMainWindow();
 
 private:
@@ -21,6 +22,7 @@ private:
     // variables
     std::string separator;
     bool matrixIsLoaded;
+    TController *controller;
 
     // functions and procedures
     void logMessage(std::string message);

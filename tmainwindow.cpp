@@ -1,13 +1,14 @@
 #include "tmainwindow.h"
 #include "ui_tmainwindow.h"
 
-TMainWindow::TMainWindow(QWidget *parent)
+TMainWindow::TMainWindow(TController *controller, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::TMainWindow)
 {
     ui->setupUi(this);
-
     initUI();
+
+    this->controller = controller;
 }
 
 TMainWindow::~TMainWindow()

@@ -10,10 +10,19 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    tmainwindow.cpp
+    tcontroller.cpp \
+    tmainwindow.cpp \
+    tmatrix.cpp \
+    tmatrixreader.cpp \
+    tpoint.cpp
 
 HEADERS += \
-    tmainwindow.h
+    tcontroller.h \
+    theuristics.h \
+    tmainwindow.h \
+    tmatrix.h \
+    tmatrixreader.h \
+    tpoint.h
 
 FORMS += \
     tmainwindow.ui
